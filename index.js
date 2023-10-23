@@ -99,8 +99,26 @@ for (var i = 0; i < finances.length; i++) {
 let sum = 0;
 
 // iterate over each item in the array
-for (i = 0; i < finances.length; i++) {
+for (let i = 0; i < finances.length; i++) {
   sum += finances[i][1];
 }
 // print out the result
 console.log("Total: $" + sum);
+
+// Average changes in Profit/Losses over the entire period
+let total = 0;
+for (var i = 1; i < finances.length; i++) {
+// tracking the total changes in profits from month to month
+  var financeChanges = finances[i][1];
+  var weekAheadChanges = finances[i - 1][1];
+  var currentWeekChanges = financeChanges - weekAheadChanges;
+  total += currentWeekChanges;
+}
+// console.log("averageFinances: " + total);
+
+// Average change throughout the months 
+var averageChange = total / (finances.length - 1);
+// print out the result and round it to 2 decimal places
+console.log("Average Change: " + averageChange.toFixed(2));
+
+
