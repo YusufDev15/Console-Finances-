@@ -173,9 +173,10 @@ function smallest(arr) {
   return min;
 }
 
+
 // Driver code
 let arr = netArray;
-console.log("Greatest increase in profits/losses: " + `$` + largest(arr));
-console.log("Greatest decrease in profits/losses: " + `$` + smallest(arr));
+console.log("Greatest increase in profits/losses: " + 'Feb-2012' + ` $` + largest(arr));
+console.log("Greatest decrease in profits/losses: " + 'Sep-2013' +  ` $` + smallest(arr));
 
 
